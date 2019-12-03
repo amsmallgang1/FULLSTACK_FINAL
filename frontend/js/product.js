@@ -9,7 +9,9 @@ $(function () {
         $("#plist").empty();
         // #12 Get all products and display as a table
         // use $.get
-
+        $.get("https://localhost:8080/productdetail.html?pid=5de544bb632ecb818c49f01c_id", function (data, status) {
+            console.log(status);
+            console.log(data);
         // ===============================
     }
     
@@ -30,7 +32,8 @@ $(function () {
 
         // #13 Add new products by calling api
         // use $.post
-
+        $.post("https://localhost:8080/", {suggest: txt}, fuction(result){$("span"),html(result);
+    });
         // ===============================
 
     });
