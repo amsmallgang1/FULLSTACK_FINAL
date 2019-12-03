@@ -10,7 +10,18 @@ $(function () {
     function getData() {
         // #14 Get a selected product and display as a form
         // use $.get
-
+        $.ajax({
+            url: url,
+            type: 'GET',
+            data: editproduct,
+            success: function (result) {
+                //Show updated status
+                $("#modalbody").text("Updated product " + pid);
+                $('#alertModal').modal('toggle');
+                // Refresh data
+                getData();
+            }
+        });
         // ===============================
     }
 
@@ -49,7 +60,18 @@ $(function () {
     $("#confirmdelete").click(function () {
         // #15 Get a selected product and go back to product list
         // use $.get and winidow.location.href
-
+        $.ajax({
+            url: url,
+            type: 'DELETE',
+            data: editproduct,
+            success: function (result) {
+                //Show updated status
+                $("#modalbody").text("Updated product " + pid);
+                $('#alertModal').modal('toggle');
+                // Refresh data
+                getData();
+            }
+        });
         // ===============================
     });
 });
