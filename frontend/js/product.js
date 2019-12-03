@@ -32,9 +32,9 @@ $(function () {
 
         // #13 Add new products by calling api
         // use $.post
-        $.post("https://localhost:8080/", {suggest: txt}, fuction(result){$("span"),html(result);
+        $.post("https://localhost:8080/", {suggest: txt}, funtion(result){$("span").html(result);
     });
-        // ===============================
+}        // ===============================
 
     });
 })
