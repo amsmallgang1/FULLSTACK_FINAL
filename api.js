@@ -27,14 +27,26 @@ function updateProductById(req, res) {
     var payload = req.body
     var pid = req.params.pid;    
     // #7 Update a product by ID (findByIdAndUpdate)
-
+    $.ajax({
+        url: '/script.cgi',
+        type: 'UPDATE',
+        success: function(result) {
+            // Do something with the result
+        }
+    });
     // ===============================
 }
 
 function deleteProductById(req, res) {
     var pid = req.params.pid;    
     // #8 Delete a product by ID (findByIdAndDelete)
-
+    $.ajax({
+        url: '/script.cgi',
+        type: 'DELETE',
+        success: function(result) {
+            // Do something with the result
+        }
+    });
     // ===============================
 }
 
